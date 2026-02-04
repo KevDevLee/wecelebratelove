@@ -22,68 +22,63 @@
 }
 
 .imprint-page {
-  background: #fdfaf6;
+  min-height: 100vh;
+  padding: 3rem 1.5rem 4rem;
+  background: var(--bg-image-main) top center/var(--bg-gradient-size) no-repeat, var(--gray-999);
+  font-family: "Public Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #2f241b;
-  font-family: "Public Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif
+  display: flex;
+  justify-content: center
 }
 
 .imprint {
+  width: 100%;
   max-width: 720px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem 4rem;
-  line-height: 1.65;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem
+  background: #fff8f2f0;
+  padding: 2.5rem 2rem 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 70px #1f14100f;
+  line-height: 1.65
 }
 
 .imprint h1 {
   font-family: "Rubik", "Public Sans", sans-serif;
   font-weight: 400;
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  margin-bottom: .5rem
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem
 }
 
 .imprint h2 {
   font-family: "Rubik", "Public Sans", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin-bottom: .5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  margin-bottom: .35rem;
   color: #3b2a1e
 }
 
-.imprint h3 {
-  font-family: "Public Sans", sans-serif;
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-top: .5rem;
-  margin-bottom: .2rem;
-  color: #4a3b32
-}
-
 .imprint a {
-  color: #9b5c2d;
+  color: #a4552c;
   text-decoration: underline
 }
 
-.imprint section {
-  padding-bottom: .5rem;
-  border-bottom: 1px solid #eadacc
+.imprint p {
+  margin: .25rem 0
 }
 
-.imprint section:last-of-type {
-  border-bottom: none
+.imprint section {
+  margin-top: 1.5rem
 }
 
 .imprint-back {
-  font-size: .875rem;
-  margin-bottom: 1rem
+  font-size: .9rem;
+  margin-bottom: 1.25rem
 }
 
 .imprint-updated {
   font-size: .95rem;
   color: #6b5c50;
-  margin-bottom: .5rem
+  margin-bottom: 1rem
 }
 
 @media (min-width: 50em) {
