@@ -1,9 +1,9 @@
-.hero-content {
+.about-hero__content {
   font-size: var(--text-lg);
   text-align: center
 }
 
-.hero-content .tagline {
+.about-hero__content .about-hero__tagline {
   max-width: 37ch;
   margin-inline: auto;
   font-size: var(--text-sm);
@@ -82,43 +82,62 @@
 }
 
 @media (min-width: 50em) {
-  .hero-content {
+  .about-hero__content {
     font-size: var(--text-xl)
   }
 
-  .hero-content .tagline {
+  .about-hero__content .about-hero__tagline {
     font-size: var(--text-md)
   }
 
-  .hero-content.start {
+  .about-hero__content {
     text-align: start
   }
 
-  .hero-content.start .tagline {
+  .about-hero__content .about-hero__tagline {
     margin-inline: unset
   }
 }
 
-#primary-navigation {
+.site-nav__menu {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
   justify-content: center;
-  gap: calc(var(--spacing) * 4)
+  gap: calc(var(--spacing) * 4);
+  font-size: var(--text-sm);
+  padding-bottom: calc(var(--spacing) * 4)
+}
+
+@media (max-width: 47.999rem) {
+  .site-nav__menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: calc(var(--spacing) * 2)
+  }
+
+  .site-nav__menu.is-open {
+    display: flex
+  }
+}
+
+@media (min-width: 48rem) {
+  .site-nav__menu {
+    padding-bottom: 0
+  }
 }
 
 @media (min-width: 50em) {
-  #primary-navigation {
+  .site-nav__menu {
     flex: 0 1 auto;
     max-width: 36rem;
     margin-inline: auto;
     justify-content: space-between;
     gap: calc(var(--spacing) * 8)
   }
-}
-
-.faq-row {
-  padding-block: calc(var(--spacing) * 1.25);
-  display: flex;
-  justify-content: space-between;
-  align-items: center
 }
 
 /*! tailwindcss v4.1.12 | MIT License | https://tailwindcss.com */
@@ -1981,25 +2000,64 @@ html {
   padding-top: clamp(8rem, 10vw, 10rem)
 }
 
-.nav-container {
+.site-nav {
   color: var(--gray-200)
 }
 
-.nav-bg {
+.site-nav.is-top {
+  width: calc(100% - 2rem);
+  max-width: 80rem
+}
+
+.site-nav.is-scrolled {
+  width: calc(100% - 2rem);
+  max-width: 56rem;
+  border-radius: 2rem
+}
+
+.site-nav.is-open {
+  width: calc(100% - 2rem);
+  max-width: 42rem;
+  border-radius: 1.5rem
+}
+
+.site-nav.is-mobile {
+  width: 100%;
+  max-width: none
+}
+
+.site-nav.has-surface {
   background-color: color-mix(in srgb, var(--gray-900) 50%, transparent);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   box-shadow: var(--shadow-lg)
 }
 
-.mobile-nav-bg {
-  background-color: var(--gray-800);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: var(--shadow-md)
+.site-nav__inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-inline: auto;
+  padding: .5rem
 }
 
-.nav-text {
+.site-nav__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.site-nav__brand {
+  color: currentColor;
+  gap: calc(var(--spacing) * 4);
+  align-items: center;
+  letter-spacing: var(--tracking-tighter);
+  display: inline-flex;
+  font-weight: 700;
+  font-size: 1.25rem
+}
+
+.site-nav__icon-stroke {
   color: var(--gray-200);
   stroke: var(--gray-200)
 }
@@ -2009,7 +2067,13 @@ html {
   background-color: var(--gray-700)
 }
 
-.nav-link {
+.site-nav__link {
+  display: block;
+  white-space: nowrap;
+  text-align: center;
+  flex-shrink: 0;
+  padding-top: calc(var(--spacing) * .5);
+  padding-bottom: calc(var(--spacing) * .5);
   font-family: "Cardo", serif;
   font-size: 0.95rem;
   color: #8b5e3c;
@@ -2020,29 +2084,38 @@ html {
   letter-spacing: 0.02em
 }
 
-.nav-link-active {
+.site-nav__link.is-active {
   border-bottom-color: currentColor;
   font-weight: 600
 }
 
-.nav-toggle-icon {
+.site-nav__toggle-icon {
   display: block
 }
 
-.nav-toggle-icon--close {
+.site-nav__toggle-icon--close {
   display: none
 }
 
-.nav-toggle.is-active .nav-toggle-icon--open {
+.site-nav__toggle.is-active .site-nav__toggle-icon--open {
   display: none
 }
 
-.nav-toggle.is-active .nav-toggle-icon--close {
+.site-nav__toggle.is-active .site-nav__toggle-icon--close {
   display: block
 }
 
-.nav-toggle {
+.site-nav__toggle {
   display: block
+}
+
+.site-nav__brand:focus-visible,
+.site-nav__link:focus-visible,
+.site-nav__toggle:focus-visible,
+footer a:focus-visible {
+  outline: 2px solid #a77957;
+  outline-offset: 3px;
+  border-radius: .45rem
 }
 
 .btn-brown {
@@ -2055,7 +2128,13 @@ html {
 }
 
 @media (min-width: 48rem) {
-  .nav-toggle {
+  .site-nav__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between
+  }
+
+  .site-nav__toggle {
     display: none
   }
 }

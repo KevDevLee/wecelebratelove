@@ -1,0 +1,21 @@
+{
+  "name": "wecelebratelove",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "sh -c 'python3 -m http.server 5500 & server_pid=$!; sleep 1; open http://localhost:5500/index.html; wait $server_pid'",
+    "dev:php": "sh -c 'command -v php >/dev/null 2>&1 && php -S 127.0.0.1:8000 || (echo \"php ist nicht installiert\" && exit 1)'",
+    "dev:help": "echo \"dev => http://localhost:5500 | dev:php benötigt php\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevDevLee/wecelebratelove.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevDevLee/wecelebratelove/issues"
+  },
+  "homepage": "https://github.com/KevDevLee/wecelebratelove#readme"
+}

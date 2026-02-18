@@ -43,10 +43,10 @@
  <body>
   <div class="stack backgrounds">
    <section class="w-full" data-nav="">
-    <div class="fixed z-50 px-4 py-2 mt-4! transition-all duration-500 left-1/2 -translate-x-1/2 nav-container w-[calc(100%-2rem)] max-w-7xl" data-nav-container="">
-     <div class="flex flex-col w-full p-2 mx-auto md:items-center md:justify-between md:flex-row">
-      <div class="flex flex-row items-center justify-between">
-       <a class="text-current gap-4 items-center tracking-tighter inline-flex font-bold text-xl" href="/" title="link to main page">
+    <div class="fixed z-50 px-4 py-2 mt-4! transition-all duration-500 left-1/2 -translate-x-1/2 site-nav is-top" data-site-nav="">
+     <div class="site-nav__inner">
+      <div class="site-nav__header">
+       <a aria-label="Zur Startseite" class="site-nav__brand" href="/">
         <!-- <img
             class="transition-all duration-300"
            
@@ -58,40 +58,40 @@
         <img alt="We Celebrate Love Logo" class="transition-all duration-300" decoding="async" fetchpriority="auto" height="63" loading="lazy" src="assets/images/logo-nav.webp" width="152"/>
        </a>
        <!-- Mobile menu button -->
-       <button aria-controls="primary-navigation" aria-expanded="false" class="focus:outline-none nav-toggle" data-nav-toggle="" type="button">
-        <svg class="w-6 h-6 nav-text nav-toggle-icon nav-toggle-icon--open" fill="none" viewbox="0 0 24 24">
+       <button aria-controls="primary-navigation" aria-expanded="false" aria-label="Navigation öffnen" class="site-nav__toggle" data-site-nav-toggle="" type="button">
+        <svg class="w-6 h-6 site-nav__icon-stroke site-nav__toggle-icon site-nav__toggle-icon--open" fill="none" viewBox="0 0 24 24">
          <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
          </path>
         </svg>
-        <svg class="w-6 h-6 nav-text nav-toggle-icon nav-toggle-icon--close" fill="none" viewbox="0 0 24 24">
+        <svg class="w-6 h-6 site-nav__icon-stroke site-nav__toggle-icon site-nav__toggle-icon--close" fill="none" viewBox="0 0 24 24">
          <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
          </path>
         </svg>
        </button>
       </div>
       <!-- Navigation menu -->
-      <nav class="flex flex-grow gap-4 pb-4 md:pb-0 justify-end items-center text-sm" data-nav-menu="" id="primary-navigation">
-       <a class="shrink-0 py-0.5 text-center transition-all duration-200 nav-link" data-scroll-link="" data-target="about" href="#about">
+      <nav class="site-nav__menu" data-site-nav-menu="" id="primary-navigation">
+       <a class="site-nav__link" data-scroll-link="" data-target="about" href="#about">
         <span>
          Über mich
         </span>
        </a>
-       <a class="shrink-0 py-0.5 text-center transition-all duration-200 nav-link" data-scroll-link="" data-target="wedding" href="#wedding">
+       <a class="site-nav__link" data-scroll-link="" data-target="wedding" href="#wedding">
         <span>
          Freie Trauung
         </span>
        </a>
-       <a class="shrink-0 py-0.5 text-center transition-all duration-200 nav-link" data-scroll-link="" data-target="pricing" href="#pricing">
+       <a class="site-nav__link" data-scroll-link="" data-target="pricing" href="#pricing">
         <span>
          Leistungen &amp; Kosten
         </span>
        </a>
-       <a class="shrink-0 py-0.5 text-center transition-all duration-200 nav-link" data-scroll-link="" data-target="faq" href="#faq">
+       <a class="site-nav__link" data-scroll-link="" data-target="faq" href="#faq">
         <span>
          FAQ
         </span>
        </a>
-       <a class="shrink-0 py-0.5 text-center transition-all duration-200 nav-link" data-scroll-link="" data-target="contact" href="#contact">
+       <a class="site-nav__link" data-scroll-link="" data-target="contact" href="#contact">
         <span>
          Kontakt
         </span>
@@ -108,25 +108,25 @@
    </section>
    <div class="stack gap-20 lg:gap-32 main-content">
     <div class="wrapper stack gap-8 lg:gap-20">
-     <header class="hero" data-section="" id="about">
-      <div class="hero-content stack gap-4 start">
+     <header class="about-hero" data-section="" id="about">
+      <div class="about-hero__content stack gap-4">
        <div class="stack gap-2">
-        <h2 class="text-4xl md:text-5xl font-light text-slate-800 mb-4 font-serif">
+        <h1 class="text-4xl md:text-5xl font-light text-slate-800 mb-4 font-serif">
          Hi, ich bin Nina-Christin!
-        </h2>
-        <p class="tagline">
+        </h1>
+        <p class="about-hero__tagline">
          Ich freue mich euch kennenzulernen! Ich lebe und bin aufgewachsen am wunderschönen Niederrhein. Bereits als Kind habe ich das Reden geliebt. Ich habe gerne Geschichten geschrieben und alle Menschen mit meinen Erzählungen abholen wollen. Die Idee, Brautpaare auf ihrem Weg in die gemeinsame Zukunft zu begleiten, hatte ich von meiner geliebten Oma. Durch sie durfte ich bereits viele Paare mit meinen Reden und Trauungen begeistern.
         </p>
-        <p class="tagline">
+        <p class="about-hero__tagline">
          In meinem Privatleben liebe ich es, von geliebten Menschen umgeben zu sein, aber liege auch gerne mal mit einem guten Buch und meinen Katzen auf der Couch. Ihr findet mich entweder vertieft in mein nächstes DIY-Projekt oder gemeinsam mit Freunden und einem kalten Getränk in der Hand im Sonnenschein.
         </p>
        </div>
       </div>
-      <img alt="Nina-Christin Weißweiler smiling" class="w-full h-full object-cover" decoding="async" fetchpriority="auto" height="1024" loading="lazy" src="assets/images/portrait.webp" width="1573"/>
+      <img alt="Porträt von Nina-Christin Weißweiler" class="about-hero__image" decoding="async" fetchpriority="high" height="1024" loading="eager" sizes="(min-width: 50em) 38vw, 92vw" src="assets/images/responsive/portrait-800.jpg" srcset="assets/images/responsive/portrait-480.jpg 480w, assets/images/responsive/portrait-800.jpg 800w, assets/images/responsive/portrait-1200.jpg 1200w, assets/images/portrait.webp 1573w" width="1573"/>
      </header>
-     <section class="box skills">
-      <div class="stack gap-2 lg:gap-4">
-       <svg aria-hidden="true" class="astro-patnjmll" fill="url(#icon-gradient-1fwxvl4gq)" height="40" stroke="url(#icon-gradient-1fwxvl4gq)" style="--size:2.5rem" viewbox="0 0 256 256" width="40">
+     <section class="usp-grid">
+      <div class="usp-grid__item stack gap-2 lg:gap-4">
+       <svg aria-hidden="true" class="astro-patnjmll" fill="url(#icon-gradient-1fwxvl4gq)" height="40" stroke="url(#icon-gradient-1fwxvl4gq)" style="--size:2.5rem" viewBox="0 0 256 256" width="40">
         <g>
          <path d="M128 216S28 160 28 92a52 52 0 0 1 100-20h0a52 52 0 0 1 100 20c0 68-100 124-100 124Z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
          </path>
@@ -149,8 +149,8 @@
       Trauung wird unvergesslich in euren Herzen bleiben.
        </p>
       </div>
-      <div class="stack gap-2 lg:gap-4">
-       <svg aria-hidden="true" class="astro-patnjmll" fill="url(#icon-gradient-14w1yblvz)" height="40" stroke="url(#icon-gradient-14w1yblvz)" style="--size:2.5rem" viewbox="0 0 256 256" width="40">
+      <div class="usp-grid__item stack gap-2 lg:gap-4">
+       <svg aria-hidden="true" class="astro-patnjmll" fill="url(#icon-gradient-14w1yblvz)" height="40" stroke="url(#icon-gradient-14w1yblvz)" style="--size:2.5rem" viewBox="0 0 256 256" width="40">
         <g>
          <path d="M72,128a134.63,134.63,0,0,1-14.16,60.47,8,8,0,1,1-14.32-7.12A118.8,118.8,0,0,0,56,128,71.73,71.73,0,0,1,83,71.8,8,8,0,1,1,93,84.29,55.76,55.76,0,0,0,72,128Zm56-8a8,8,0,0,0-8,8,184.12,184.12,0,0,1-23,89.1,8,8,0,0,0,14,7.76A200.19,200.19,0,0,0,136,128,8,8,0,0,0,128,120Zm0-32a40,40,0,0,0-40,40,8,8,0,0,0,16,0,24,24,0,0,1,48,0,214.09,214.09,0,0,1-20.51,92A8,8,0,1,0,146,226.83,230,230,0,0,0,168,128,40,40,0,0,0,128,88Zm0-64A104.11,104.11,0,0,0,24,128a87.76,87.76,0,0,1-5,29.33,8,8,0,0,0,15.09,5.33A103.9,103.9,0,0,0,40,128a88,88,0,0,1,176,0,282.24,282.24,0,0,1-5.29,54.45,8,8,0,0,0,6.3,9.4,8.22,8.22,0,0,0,1.55.15,8,8,0,0,0,7.84-6.45A298.37,298.37,0,0,0,232,128,104.12,104.12,0,0,0,128,24ZM94.4,152.17A8,8,0,0,0,85,158.42a151,151,0,0,1-17.21,45.44,8,8,0,0,0,13.86,8,166.67,166.67,0,0,0,19-50.25A8,8,0,0,0,94.4,152.17ZM128,56a72.85,72.85,0,0,0-9,.56,8,8,0,0,0,2,15.87A56.08,56.08,0,0,1,184,128a252.12,252.12,0,0,1-1.92,31A8,8,0,0,0,189,168a8.39,8.39,0,0,0,1,.06,8,8,0,0,0,7.92-7,266.48,266.48,0,0,0,2-33A72.08,72.08,0,0,0,128,56Zm57.93,128.25a8,8,0,0,0-9.75,5.75c-1.46,5.69-3.15,11.4-5,17a8,8,0,0,0,5,10.13,7.88,7.88,0,0,0,2.55.42,8,8,0,0,0,7.58-5.46c2-5.92,3.79-12,5.35-18.05A8,8,0,0,0,185.94,184.26Z">
          </path>
@@ -173,8 +173,8 @@
       Zeremonie wird so einzigartig, wie ihr beide.
        </p>
       </div>
-      <div class="stack gap-2 lg:gap-4">
-       <svg aria-hidden="true" class="astro-patnjmll" fill="url(#icon-gradient-t8i9qicg)" height="40" stroke="url(#icon-gradient-t8i9qicg)" style="--size:2.5rem" viewbox="0 0 256 256" width="40">
+      <div class="usp-grid__item stack gap-2 lg:gap-4">
+       <svg aria-hidden="true" class="astro-patnjmll" fill="url(#icon-gradient-t8i9qicg)" height="40" stroke="url(#icon-gradient-t8i9qicg)" style="--size:2.5rem" viewBox="0 0 256 256" width="40">
         <g>
          <path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z">
          </path>
@@ -200,20 +200,20 @@
      </section>
     </div>
     <main class="wrapper stack gap-20 lg:gap-48">
-     <section class="with-background flex flex-col gap-32" data-section="" id="wedding">
+     <section class="content-block content-block--with-background flex flex-col gap-32" data-section="" id="wedding">
       <div class="max-w-6xl mx-auto w-full mb-12">
        <div class="flex flex-col lg:flex-row gap-12 items-start">
         <div class="w-full lg:w-1/2 flex-shrink-0">
          <div class="space-y-6">
           <div class="aspect-[3/2] flex items-center justify-center overflow-hidden rounded-lg">
-           <img alt="Nina-Christin Weißweiler smiling" class="w-full h-full object-cover" decoding="async" fetchpriority="auto" height="3269" loading="lazy" src="assets/images/photo-1.webp" style="aspect-ratio: 3 / 2;" width="4903"/>
+           <img alt="Nina-Christin Weißweiler im Ganzkörperporträt" class="media-cover" decoding="async" fetchpriority="auto" height="3269" loading="lazy" sizes="(min-width: 64rem) 36rem, (min-width: 40rem) 90vw, 94vw" src="assets/images/responsive/photo-1-960.jpg" srcset="assets/images/responsive/photo-1-640.jpg 640w, assets/images/responsive/photo-1-960.jpg 960w, assets/images/responsive/photo-1-1400.jpg 1400w, assets/images/photo-1.webp 4903w" style="aspect-ratio: 3 / 2;" width="4903"/>
           </div>
           <div class="grid grid-cols-2 gap-6 mt-2!">
            <div class="aspect-square flex items-center justify-center overflow-hidden rounded-lg">
-            <img alt="Nina-Christin Weißweiler smiling" class="w-full h-full object-cover" decoding="async" fetchpriority="auto" height="5400" loading="lazy" src="assets/images/photo-2.webp" style="aspect-ratio: 1 / 1;" width="3600"/>
+            <img alt="Nina-Christin Weißweiler – quadratisches Porträt links" class="media-cover" decoding="async" fetchpriority="auto" height="5400" loading="lazy" sizes="(min-width: 64rem) 17rem, (min-width: 40rem) 43vw, 46vw" src="assets/images/responsive/photo-2-700.jpg" srcset="assets/images/responsive/photo-2-400.jpg 400w, assets/images/responsive/photo-2-700.jpg 700w, assets/images/responsive/photo-2-1000.jpg 1000w, assets/images/photo-2.webp 3600w" style="aspect-ratio: 1 / 1;" width="3600"/>
            </div>
            <div class="aspect-square flex items-center justify-center overflow-hidden rounded-lg">
-            <img alt="Nina-Christin Weißweiler smiling" class="w-full h-full object-cover" decoding="async" fetchpriority="auto" height="3479" loading="lazy" src="assets/images/photo-3.webp" style="aspect-ratio: 1 / 1;" width="5219"/>
+            <img alt="Nina-Christin Weißweiler – quadratisches Porträt rechts" class="media-cover" decoding="async" fetchpriority="auto" height="3479" loading="lazy" sizes="(min-width: 64rem) 17rem, (min-width: 40rem) 43vw, 46vw" src="assets/images/responsive/photo-3-700.jpg" srcset="assets/images/responsive/photo-3-400.jpg 400w, assets/images/responsive/photo-3-700.jpg 700w, assets/images/responsive/photo-3-1000.jpg 1000w, assets/images/photo-3.webp 5219w" style="aspect-ratio: 1 / 1;" width="5219"/>
            </div>
           </div>
          </div>
@@ -295,7 +295,7 @@
         </div>
         <div class="w-full lg:w-1/2 flex-shrink-0 self-stretch">
          <div class="aspect-[2/3] flex items-center justify-center overflow-hidden rounded-lg h-full">
-          <img alt="Nina-Christin Weißweiler smiling" class="w-full h-full object-cover" decoding="async" fetchpriority="auto" height="1600" loading="lazy" src="assets/images/photo-4.webp" style="aspect-ratio: 2 / 3;" width="1066"/>
+          <img alt="Nina-Christin Weißweiler im Hochformatporträt" class="media-cover" decoding="async" fetchpriority="auto" height="1600" loading="lazy" sizes="(min-width: 64rem) 36rem, (min-width: 40rem) 90vw, 94vw" src="assets/images/responsive/photo-4-800.jpg" srcset="assets/images/responsive/photo-4-500.jpg 500w, assets/images/responsive/photo-4-800.jpg 800w, assets/images/responsive/photo-4-1066.jpg 1066w" style="aspect-ratio: 2 / 3;" width="1066"/>
          </div>
         </div>
        </div>
@@ -383,8 +383,8 @@
       </div>
      </div>
     </section>
-    <section class="section with-background bg-variant" data-section="" id="faq">
-     <header class="section-header stack gap-2 lg:gap-4">
+    <section class="content-grid content-grid--with-background content-grid--alt-background" data-section="" id="faq">
+     <header class="content-grid__header stack gap-2 lg:gap-4">
       <h3>
        Häufig gestellte Fragen
       </h3>
@@ -395,23 +395,23 @@
      </header>
     </section>
    </div>
-   <div class="relative w-full px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:rounded-lg sm:px-10 flex justify-center">
-    <div class="px-5 max-w-2xl w-full">
-      <div class="mx-auto mt-8 grid max-w-xl faq-list">
-       <div class="faq-row">
-       <div class="faq-item" data-faq-item="">
-        <button aria-expanded="false" class="faq-button flex cursor-pointer items-center justify-between font-medium w-full text-left" data-faq-toggle="" type="button">
-         <span class="faq-question-text">
+   <div class="faq-shell">
+    <div class="faq-shell__inner">
+      <div class="faq-list">
+       <div class="faq-list__row">
+       <div class="faq-item-card" data-faq-item-card="">
+        <button aria-expanded="false" class="faq-item-card__button" data-faq-toggle="" type="button">
+         <span class="faq-item-card__question">
           Wie lange dauert eine freie Trauung?
          </span>
-         <span class="transition-transform duration-300 faq-icon">
-          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24">
+         <span class="faq-item-card__icon">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
            <path d="M6 9l6 6 6-6">
            </path>
           </svg>
          </span>
         </button>
-        <div class="mt-3! text-neutral-600 overflow-hidden transition-all duration-300 ease-out faq-answer" data-faq-content="">
+        <div class="faq-item-card__answer" data-faq-content="">
          <p>
           Da eure Trauung ganz individuell gestaltbar ist, richte ich mich nach euren Wünschen. Man kann allerdings sagen, dass eine freie Trauung im Durchschnitt zwischen einer dreiviertel bis vollen Stunde dauert.
           <br/>
@@ -420,20 +420,20 @@
         </div>
        </div>
       </div>
-      <div class="faq-row">
-       <div class="faq-item" data-faq-item="">
-        <button aria-expanded="false" class="faq-button flex cursor-pointer items-center justify-between font-medium w-full text-left" data-faq-toggle="" type="button">
-         <span class="faq-question-text">
+      <div class="faq-list__row">
+       <div class="faq-item-card" data-faq-item-card="">
+        <button aria-expanded="false" class="faq-item-card__button" data-faq-toggle="" type="button">
+         <span class="faq-item-card__question">
           Warum sollten wir eine Traurednerin buchen und die Trauung nicht lieber von Familie oder Freunden machen lassen?
          </span>
-         <span class="transition-transform duration-300 faq-icon">
-          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24">
+         <span class="faq-item-card__icon">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
            <path d="M6 9l6 6 6-6">
            </path>
           </svg>
          </span>
         </button>
-        <div class="mt-3! text-neutral-600 overflow-hidden transition-all duration-300 ease-out faq-answer" data-faq-content="">
+        <div class="faq-item-card__answer" data-faq-content="">
          <p>
           Zuerst einmal, beides kann ganz wunderbar sein. Wenn ihr jemanden kennt, der sich dies schon immer vorstellen konnte und dem ihr es voll und ganz zutraut - go for it! Allerdings sind viele Personen sehr nervös, kennen sich mit Trauungen nicht aus und fühlen sich mit dieser Aufgabe überfordert. Eure Gäste sollen den Tag genauso genießen können, wie ihr.
           <br/>
@@ -443,20 +443,20 @@
         </div>
        </div>
       </div>
-      <div class="faq-row">
-       <div class="faq-item" data-faq-item="">
-        <button aria-expanded="false" class="faq-button flex cursor-pointer items-center justify-between font-medium w-full text-left" data-faq-toggle="" type="button">
-         <span class="faq-question-text">
+      <div class="faq-list__row">
+       <div class="faq-item-card" data-faq-item-card="">
+        <button aria-expanded="false" class="faq-item-card__button" data-faq-toggle="" type="button">
+         <span class="faq-item-card__question">
           Wie läuft das Kennenlernen ab und wie geht es weiter?
          </span>
-         <span class="transition-transform duration-300 faq-icon">
-          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24">
+         <span class="faq-item-card__icon">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
            <path d="M6 9l6 6 6-6">
            </path>
           </svg>
          </span>
         </button>
-        <div class="mt-3! text-neutral-600 overflow-hidden transition-all duration-300 ease-out faq-answer" data-faq-content="">
+        <div class="faq-item-card__answer" data-faq-content="">
          <p>
           Nachdem ihr Kontakt zu mir aufgenommen habt, vereinbaren wir ein erstes Treffen in einem Cafe oder Restaurant. Wir reden über eure Wünsche und Vorstellungen und ich gebe euch einen Einblick in die Möglichkeiten einer freien Trauung und in meine Arbeit für euch. Ich beantworte eure Fragen und wir lernen uns ersteinmal kennen.
           <br/>
@@ -466,20 +466,20 @@
         </div>
        </div>
       </div>
-      <div class="faq-row">
-       <div class="faq-item" data-faq-item="">
-        <button aria-expanded="false" class="faq-button flex cursor-pointer items-center justify-between font-medium w-full text-left" data-faq-toggle="" type="button">
-         <span class="faq-question-text">
+      <div class="faq-list__row">
+       <div class="faq-item-card" data-faq-item-card="">
+        <button aria-expanded="false" class="faq-item-card__button" data-faq-toggle="" type="button">
+         <span class="faq-item-card__question">
           Können unsere Trauzeugen und Gäste Teil unserer Trauung werden?
          </span>
-         <span class="transition-transform duration-300 faq-icon">
-          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24">
+         <span class="faq-item-card__icon">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
            <path d="M6 9l6 6 6-6">
            </path>
           </svg>
          </span>
         </button>
-        <div class="mt-3! text-neutral-600 overflow-hidden transition-all duration-300 ease-out faq-answer" data-faq-content="">
+        <div class="faq-item-card__answer" data-faq-content="">
          <p>
           Ja, auf jeden Fall! Ich empfehle es sogar. In meinen Trauungen wird das “wir” groß geschrieben. Eure Freunde, Familie und Gäste machen euren Tag erst so richtig besonders und das sollte sich auch in eurer Zeremonie wiederfinden.
           <br/>
@@ -489,40 +489,40 @@
         </div>
        </div>
       </div>
-      <div class="faq-row">
-       <div class="faq-item" data-faq-item="">
-        <button aria-expanded="false" class="faq-button flex cursor-pointer items-center justify-between font-medium w-full text-left" data-faq-toggle="" type="button">
-         <span class="faq-question-text">
+      <div class="faq-list__row">
+       <div class="faq-item-card" data-faq-item-card="">
+        <button aria-expanded="false" class="faq-item-card__button" data-faq-toggle="" type="button">
+         <span class="faq-item-card__question">
           Warum sollten wir uns für eine freie Trauung statt einer anderen Trauform entscheiden?
          </span>
-         <span class="transition-transform duration-300 faq-icon">
-          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24">
+         <span class="faq-item-card__icon">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
            <path d="M6 9l6 6 6-6">
            </path>
           </svg>
          </span>
         </button>
-        <div class="mt-3! text-neutral-600 overflow-hidden transition-all duration-300 ease-out faq-answer" data-faq-content="">
+        <div class="faq-item-card__answer" data-faq-content="">
          <p>
           Hierfür gibt es keine pauschale Antwort. Aber eine freie Trauung bietet euch die Möglichkeit einer Zeremonie, die euch widerspiegelt und nach euren Wünschen gestaltet wird. Religiöse Trauungen oder das Standesamt haben oft einen festen Rahmen, an den man sich halten “muss”. Aber in einer freien Trauung gilt: Alles kann, nichts muss. Wenn ihr euch mit einem Teil einer “traditionellen” Hochzeit nicht wohlfühlt: lassen wir es weg. Wenn ihr euch etwas Ausgefallenes wünscht: ich bin dabei und plane mit euch die Umsetzung.
          </p>
         </div>
        </div>
       </div>
-      <div class="faq-row">
-       <div class="faq-item" data-faq-item="">
-        <button aria-expanded="false" class="faq-button flex cursor-pointer items-center justify-between font-medium w-full text-left" data-faq-toggle="" type="button">
-         <span class="faq-question-text">
+      <div class="faq-list__row">
+       <div class="faq-item-card" data-faq-item-card="">
+        <button aria-expanded="false" class="faq-item-card__button" data-faq-toggle="" type="button">
+         <span class="faq-item-card__question">
           Kann eine freie Trauung rechtlich bindend sein?
          </span>
-         <span class="transition-transform duration-300 faq-icon">
-          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24">
+         <span class="faq-item-card__icon">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
            <path d="M6 9l6 6 6-6">
            </path>
           </svg>
          </span>
         </button>
-        <div class="mt-3! text-neutral-600 overflow-hidden transition-all duration-300 ease-out faq-answer" data-faq-content="">
+        <div class="faq-item-card__answer" data-faq-content="">
          <p>
           Nein. Bitte beachtet, dass eine freie Trauung die standesamtliche Trauung nicht ersetzen kann, wenn ihr auch rechtlich verheiratet sein wollt. Manche Städte bieten an, dass ein Standesbeamter zu eurer Location kommt, um euch rechtlich zu verheiraten und im Nachhinein könntet ihr natürlich noch eine freie Trauung machen.
           <br/>
@@ -532,40 +532,40 @@
         </div>
        </div>
       </div>
-      <div class="faq-row">
-       <div class="faq-item" data-faq-item="">
-        <button aria-expanded="false" class="faq-button flex cursor-pointer items-center justify-between font-medium w-full text-left" data-faq-toggle="" type="button">
-         <span class="faq-question-text">
+      <div class="faq-list__row">
+       <div class="faq-item-card" data-faq-item-card="">
+        <button aria-expanded="false" class="faq-item-card__button" data-faq-toggle="" type="button">
+         <span class="faq-item-card__question">
           Können wir religiöse Elemente in unsere freie Trauung einbauen?
          </span>
-         <span class="transition-transform duration-300 faq-icon">
-          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24">
+         <span class="faq-item-card__icon">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
            <path d="M6 9l6 6 6-6">
            </path>
           </svg>
          </span>
         </button>
-        <div class="mt-3! text-neutral-600 overflow-hidden transition-all duration-300 ease-out faq-answer" data-faq-content="">
+        <div class="faq-item-card__answer" data-faq-content="">
          <p>
           Jein. Natürlich lässt eine freie Trauung grundsätzlich alles zu, aber ich bitte euch zu beachten, dass ich keinen religiösen Hintergrund habe und mich daher nicht wohl damit fühle Religiöses “zu predigen”. Gerne können aber eure Gäste entsprechende Worte an euch richten oder gemeinsam für euch beten. Gemeinsam mit euch schaue ich gerne, ob sich ein religiöses Element auch in einem Trauritual umsetzen lässt.
          </p>
         </div>
        </div>
       </div>
-      <div class="faq-row">
-       <div class="faq-item" data-faq-item="">
-        <button aria-expanded="false" class="faq-button flex cursor-pointer items-center justify-between font-medium w-full text-left" data-faq-toggle="" type="button">
-         <span class="faq-question-text">
+      <div class="faq-list__row">
+       <div class="faq-item-card" data-faq-item-card="">
+        <button aria-expanded="false" class="faq-item-card__button" data-faq-toggle="" type="button">
+         <span class="faq-item-card__question">
           Für wen ist eine freie Trauung geeignet?
          </span>
-         <span class="transition-transform duration-300 faq-icon">
-          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24">
+         <span class="faq-item-card__icon">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
            <path d="M6 9l6 6 6-6">
            </path>
           </svg>
          </span>
         </button>
-        <div class="mt-3! text-neutral-600 overflow-hidden transition-all duration-300 ease-out faq-answer" data-faq-content="">
+        <div class="faq-item-card__answer" data-faq-content="">
          <p>
           Für jeden! Egal ob es eure erste Hochzeit ist oder ihr erneut die Liebe gefunden habt, ob ihr eurer Eheversprechen erneuern wollt oder ohne rechtlichen Hintergrund einfach eure Verbindung zelebrieren wollt.
           <br/>
@@ -575,20 +575,20 @@
         </div>
        </div>
       </div>
-      <div class="faq-row">
-       <div class="faq-item" data-faq-item="">
-        <button aria-expanded="false" class="faq-button flex cursor-pointer items-center justify-between font-medium w-full text-left" data-faq-toggle="" type="button">
-         <span class="faq-question-text">
+      <div class="faq-list__row">
+       <div class="faq-item-card" data-faq-item-card="">
+        <button aria-expanded="false" class="faq-item-card__button" data-faq-toggle="" type="button">
+         <span class="faq-item-card__question">
           Was passiert, wenn du krank wirst?
          </span>
-         <span class="transition-transform duration-300 faq-icon">
-          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24">
+         <span class="faq-item-card__icon">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
            <path d="M6 9l6 6 6-6">
            </path>
           </svg>
          </span>
         </button>
-        <div class="mt-3! text-neutral-600 overflow-hidden transition-all duration-300 ease-out faq-answer" data-faq-content="">
+        <div class="faq-item-card__answer" data-faq-content="">
          <p>
           Für diesen Fall arbeite ich mit mehreren Trauredner*innen zusammen, welche - mit eurer Zustimmung - die Trauung übernehmen würden. Sollte ich also wider Erwarten ausfallen, wird eure freie Trauung, wie geplant, stattfinden! Dies ist für euch natürlich nicht mit Mehrkosten verbunden!
          </p>
@@ -626,7 +626,7 @@
         <div class="space-y-4">
          <div class="flex items-center space-x-3">
           <div class="w-10 h-10 bg-amber-50 rounded-full flex items-center justify-center">
-           <svg class="w-5 h-5 text-brown-primary" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <svg class="w-5 h-5 text-brown-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
             </path>
            </svg>
@@ -665,7 +665,7 @@
               </div> -->
          <div class="flex items-center space-x-3">
           <div class="w-10 h-10 bg-amber-50 rounded-full flex items-center justify-center">
-           <svg class="w-5 h-5 text-brown-primary" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <svg class="w-5 h-5 text-brown-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
             </path>
             <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
@@ -772,7 +772,7 @@
        <span class="sr-only">
         Facebook
        </span>
-       <svg fill="currentColor" viewbox="0 0 24 24">
+       <svg fill="currentColor" viewBox="0 0 24 24">
         <path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd">
         </path>
        </svg>
@@ -781,7 +781,7 @@
        <span class="sr-only">
         Instagram
        </span>
-       <svg fill="currentColor" viewbox="0 0 24 24">
+       <svg fill="currentColor" viewBox="0 0 24 24">
         <path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd">
         </path>
        </svg>
