@@ -145,7 +145,19 @@ const setupFaq = () => {
   });
 };
 
+const setupPlaceholderLinks = () => {
+  const placeholderLinks = document.querySelectorAll('[data-placeholder-link]');
+  if (!placeholderLinks.length) return;
+
+  placeholderLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+    });
+  });
+};
+
 window.addEventListener('DOMContentLoaded', () => {
   manageNavState();
   setupFaq();
+  setupPlaceholderLinks();
 });

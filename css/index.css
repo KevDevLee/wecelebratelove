@@ -48,7 +48,7 @@
   margin-bottom: 1rem
 }
 
-.imprint h2 {
+.imprint:not(.imprint--privacy) h2 {
   font-family: "Rubik", "Public Sans", sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
@@ -79,6 +79,112 @@
   font-size: .95rem;
   color: #6b5c50;
   margin-bottom: 1rem
+}
+
+.imprint--privacy {
+  max-width: 760px;
+  line-height: 1.72
+}
+
+.imprint--privacy h1 {
+  font-size: clamp(2rem, 3.4vw, 2.6rem);
+  line-height: 1.15;
+  margin-bottom: .45rem
+}
+
+.imprint--privacy .imprint-updated {
+  margin-bottom: 1.75rem
+}
+
+.imprint--privacy section {
+  margin-top: 2rem;
+  padding-top: 0;
+  border-top: 0
+}
+
+.imprint--privacy section:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0
+}
+
+.imprint.imprint--privacy h2 {
+  font-size: clamp(1.6rem, 3vw, 2.15rem);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: .8rem;
+  text-wrap: balance
+}
+
+.imprint.imprint--privacy h3 {
+  font-family: "Rubik", "Public Sans", sans-serif;
+  font-size: clamp(1.03rem, 1.6vw, 1.18rem);
+  font-weight: 600;
+  line-height: 1.35;
+  margin-top: 1.2rem;
+  margin-bottom: .45rem;
+  color: #4a3627
+}
+
+.imprint.imprint--privacy h4 {
+  font-family: "Rubik", "Public Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-top: .95rem;
+  margin-bottom: .7rem;
+  color: #5a4332
+}
+
+.imprint--privacy p {
+  margin: 0;
+  color: #3a2f26
+}
+
+.imprint--privacy p+p {
+  margin-top: .95rem
+}
+
+.imprint--privacy h2+p,
+.imprint--privacy h3+p,
+.imprint--privacy h4+p {
+  margin-top: .35rem
+}
+
+.imprint--privacy a {
+  text-underline-offset: .16em;
+  text-decoration-thickness: .08em
+}
+
+.imprint--privacy ul {
+  margin: .85rem 0 0 1.3rem;
+  list-style-type: disc;
+  list-style-position: outside;
+  padding: 0
+}
+
+.imprint--privacy li {
+  margin: 0;
+  padding-left: .2rem
+}
+
+.imprint--privacy li+li {
+  margin-top: .65rem
+}
+
+@media (max-width: 47.999rem) {
+  .imprint--privacy {
+    padding: 2rem 1.25rem 2.5rem
+  }
+
+  .imprint--privacy h1 {
+    font-size: clamp(1.85rem, 8vw, 2.35rem)
+  }
+
+  .imprint.imprint--privacy h2 {
+    font-size: 1.5rem
+  }
 }
 
 @media (min-width: 50em) {
@@ -2116,6 +2222,11 @@ footer a:focus-visible {
   outline: 2px solid #a77957;
   outline-offset: 3px;
   border-radius: .45rem
+}
+
+.is-placeholder-link[aria-disabled="true"] {
+  opacity: .78;
+  cursor: not-allowed
 }
 
 .btn-brown {

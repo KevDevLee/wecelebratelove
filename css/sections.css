@@ -46,6 +46,18 @@ svg {
   object-position: top;
 }
 
+.media-cover--ratio-3x2 {
+  aspect-ratio: 3 / 2;
+}
+
+.media-cover--ratio-square {
+  aspect-ratio: 1 / 1;
+}
+
+.media-cover--ratio-2x3 {
+  aspect-ratio: 2 / 3;
+}
+
 .about-hero > .about-hero__image {
   border-radius: 1.5rem;
   box-shadow: var(--shadow-md);
